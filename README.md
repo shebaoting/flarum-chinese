@@ -1,4 +1,4 @@
-# English Language Pack for Flarum
+# Chinese Language Pack for Flarum
 
 ## Installation
 
