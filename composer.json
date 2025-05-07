@@ -1,0 +1,88 @@
+{
+    "name": "shebaoting/chinese-simplified",
+    "description": "Chinese (Simplified) language pack for Flarum.",
+    "keywords": [
+        "flarum"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^2.0"
+    },
+    "authors": [
+        {
+            "name": "Shebaoting",
+            "email": "th9th@th9th.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Shebaoting\\Chinesesimplified\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "简体中文",
+            "category": "language",
+            "icon": {
+                "image": "icon.svg",
+                "backgroundColor": "#fff",
+                "backgroundSize": "cover",
+                "backgroundPosition": "center"
+            }
+        },
+        "extiverse": {
+            "discuss": "https://discuss.flarum.org/d/22690"
+        },
+        "flarum-locale": {
+            "code": "zh-Hans",
+            "title": "简体中文"
+        },
+        "flarum-cli": {
+            "modules": {
+                "admin": true,
+                "forum": true,
+                "js": true,
+                "jsCommon": true,
+                "css": true,
+                "locale": true,
+                "gitConf": true,
+                "githubActions": true,
+                "prettier": true,
+                "typescript": true,
+                "bundlewatch": false,
+                "frontendTesting": true,
+                "backendTesting": true,
+                "phpstan": false,
+                "editorConfig": true,
+                "styleci": true
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload-dev": {
+        "psr-4": {
+            "Shebaoting\\Chinesesimplified\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": [
+            "@test:unit",
+            "@test:integration"
+        ],
+        "test:unit": "phpunit -c tests/phpunit.unit.xml",
+        "test:integration": "phpunit -c tests/phpunit.integration.xml",
+        "test:setup": "@php tests/integration/setup.php"
+    },
+    "scripts-descriptions": {
+        "test": "Runs all tests.",
+        "test:unit": "Runs all unit tests.",
+        "test:integration": "Runs all integration tests.",
+        "test:setup": "Sets up a database for use with integration tests. Execute this only once."
+    },
+    "require-dev": {
+        "flarum/testing": "^2.0"
+    }
+}
